@@ -7,7 +7,7 @@ import path from 'node:path'
 
 // Repository URL for the boilerplate project
 const REPO_URL = isGithubSSHAvailable()
-  ? 'git@github.com.me:imVSaini/wp-quickstart.git'
+  ? 'git@github.com:imVSaini/wp-quickstart.git'
   : 'https://github.com/imVSaini/wp-quickstart.git'
 
 // Default project name
