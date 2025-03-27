@@ -1,48 +1,87 @@
+# WP Quickstart
 
-<p align="center"><img src="https://equalengineers.com/wp-content/uploads/2024/04/dummy-logo-5b.png" width="320" height="auto" draggable="false" decoding="async"></p>
+[![npm version](https://badge.fury.io/js/create-wp-quickstart.svg)](https://badge.fury.io/js/create-wp-quickstart)
 
-# Framesync
+WP Quickstart is a boilerplate to quickly set up a WordPress theme development environment with the `framesync` theme.
 
-## Getting Started
+## Features
 
-### Prerequisites
-Before you begin, make sure you have Node.js and npm installed on your machine.
+- **Tailwind CSS Integration** – Fully integrated with Tailwind for rapid styling.
+- **Laravel Mix for Asset Bundling** – Uses Webpack via Laravel Mix to compile assets efficiently.
+- **Live Reload with BrowserSync** – Automatically refreshes your browser on code changes.
+- **Modular SCSS Support** – Organized SCSS structure for better maintainability.
+- **ESLint & Prettier Setup** – Enforces code quality and formatting standards.
+- **Optimized for Production** – Minified and versioned assets when building for production.
 
-### Installation
-1. Open a terminal window and navigate to the theme directory.
-2. Run the following command to install all dependencies:
+## Installation
 
-   ```bash
-   npm install
-   ```
+Ensure you have Node.js installed:
 
-### Development
-
-#### Watch for Changes
-
-During development, you can use the watch mode to automatically rebuild whenever changes are detected. Run the following command:
-
-```bash
-   npm run watch
+### Using npx
+```sh
+npx create-wp-quickstart
 ```
 
-This will start a watcher that monitors your source files, triggering a rebuild whenever a change is made.
+### Steps Performed by the Script
+1. Prompts you to enter a project name (default: `wp-quickstart`)
+2. Clones the repository into the specified project directory
+3. Cleans up unnecessary files and resets Git history
+4. Installs dependencies inside `wp-content/themes/framesync`
+5. Provides next steps for development
 
-### Production Build
+## Next Steps
 
-#### Build for Production
+Once setup is complete, navigate to your theme directory and start development:
 
-When you're ready to deploy, use the following command to create a production-ready build:
-
-```bash
-   npm run build
+```sh
+cd wp-content/themes/framesync
 ```
 
-This command optimizes and bundles your code, making it suitable for deployment. Find the output in the designated build directory.
+Start watching for changes:
 
-### Additional Information
+```sh
+yarn watch  # If Yarn is available
+# OR
+npm run watch  # If using npm
+```
 
-Contributions are welcome! Feel free to fork and submit pull requests.
+## Theme Development
 
+This project uses Laravel Mix and Tailwind CSS for theme development. The theme `framesync` includes Webpack for asset bundling and automatic browser reloading.
 
-Happy coding!
+### Important: Update Your Proxy URL
+
+Before running BrowserSync, make sure to update the `proxy` value in your `webpack.mix.js` file to match your local development URL:
+
+```js
+proxy: "example.local",
+```
+
+Replace `example.local` with your actual local development domain.
+
+### Available Commands
+
+- **Start Development:**
+  ```sh
+  npx mix watch
+  ```
+- **Lint JavaScript:**
+  ```sh
+  npm run lint
+  ```
+- **Fix Lint Issues:**
+  ```sh
+  npm run lint:fix
+  ```
+- **Build for Production:**
+  ```sh
+  npx mix --production
+  ```
+
+## License
+
+This project is open-source and available under the MIT License.
+
+---
+
+Created by [Vaibhav Saini](https://github.com/imVSaini)
