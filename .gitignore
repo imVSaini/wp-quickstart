@@ -50,6 +50,7 @@ node_modules
 # Other UnderStrap specific files and directories
 phpcs.xml
 phpcs.xml.dist
+local-phpinfo.php
 # dist/
 dist-product/
 **/img
