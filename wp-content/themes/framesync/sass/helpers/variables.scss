@@ -1,0 +1,25 @@
+:root {
+  // Color
+  --color-black: #000;
+  --color-white: #fff;
+  --color-white-rgb: 255, 255, 255;
+  --color-error: #fff;
+  --color-theme: #1a1a18;
+  --color-theme-rgb: 26, 26, 24;
+  --color-offwhite: #faf9f7;
+  --color-font: var(--color-theme);
+  --color-grey: #dbdee7;
+
+  // Text
+  --font-title: 'Poppins', 'sans-serif';
+  --font-text: 'Poppins', 'sans-serif';
+
+  // Easings
+  --easing-quint-ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --easing-quint-ease-in-out: cubic-bezier(0.83, 0, 0.17, 1);
+  --easing-basic-in-out: cubic-bezier(0.67, 0, 0.06, 1);
+
+  // z-indexes
+  --zindex-header: 500;
+  --zindex-overlay: 501;
+}

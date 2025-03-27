@@ -1,0 +1,53 @@
+.wpcf7 {
+    form {
+        .wpcf7-response-output {
+            margin: .5rem 0 0;
+            max-width: 100%;
+            padding: .625rem 1.25rem;
+            font-family: inherit;
+            border: none;
+            outline: none;
+            border-left: 2.25px solid;
+            @apply text-xs/snug;
+        }
+
+        &:is(.sent) {
+            .wpcf7-response-output {
+                color: rgb(119, 141, 69);
+                border-color: rgb(119, 141, 69);
+                background-color: rgba(119, 141, 69, 0.2);
+            }
+        }
+
+        &:is(.failed, .aborted) {
+            .wpcf7-response-output {
+                color: rgb(217, 48, 37);
+                border-color: rgb(217, 48, 37);
+                background-color: rgba(51, 65, 85, .2);
+            }
+        }
+
+        &:is(.spam) {
+            .wpcf7-response-output {
+                color: rgb(245, 110, 40) #f56e28;
+                border-color: rgb(245, 110, 40);
+                background-color: rgba(245, 110, 40, 0.2);
+            }
+        }
+
+        &:is(.invalid, .unaccepted) {
+            .wpcf7-response-output {
+                color: rgb(217, 48, 37);
+                border-color: rgb(217, 48, 37);
+                background-color: rgba(217, 48, 37, 0.2);
+            }
+        }
+
+        .wpcf7-not-valid-tip {
+            margin-top: .25rem;
+            font-family: inherit;
+            color: rgb(217, 48, 37);
+            @apply text-xs/tight;
+        }
+    }
+}

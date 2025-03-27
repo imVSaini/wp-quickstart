@@ -1,0 +1,21 @@
+@use "sass:math";
+@use "sass:meta";
+
+// Strips units from the value
+@function stripUnit($value) {
+    @if meta.type-of($value) != number {
+      @error "Invalid input for stripUnit. Please provide a numeric value.";
+    }
+  
+  @return math.div($value, $value * 0 + 1);
+}
+  
+// Return the converted value in REM units
+@function rem($value, $baseFontSize: 16px) {
+    @if meta.type-of($baseFontSize) != number or $baseFontSize == 0 {
+      @error "Invalid base font size.";
+    }
+  
+    $convertedValue: #{math.div(stripUnit($value), stripUnit($baseFontSize))}rem;
+  @return $convertedValue;
+}

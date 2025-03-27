@@ -1,0 +1,31 @@
+[*]
+charset = utf-8
+insert_final_newline = true
+end_of_line = lf
+indent_style = space
+indent_size = 2
+max_line_length = 80
+trim_trailing_whitespace = true
+
+[*.{js,ts}]
+indent_size = 2
+quote_type = single
+
+[*.php]
+indent_size = 4
+php_php_tag_style = long
+
+[*.{html,css,scss}]
+indent_size = 2
+max_line_length = 120
+
+[*.json]
+indent_size = 2
+quote_type = double
+
+[*.md]
+trim_trailing_whitespace = false
+max_line_length = off
+
+[Makefile]
+indent_style = tab
