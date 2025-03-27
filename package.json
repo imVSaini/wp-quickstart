@@ -6,7 +6,7 @@
   "main": "index.js",
   "type": "module",
   "repository": "https://github.com/imVSaini/wp-quickstart.git",
-  "keywords": [],
+  "keywords": ["wordpress", "theme", "webpack", "tailwind", "laravel-mix"],
   "author": "Vaibhav Saini",
   "license": "MIT"
 }

@@ -122,8 +122,8 @@ async function setupProject() {
     console.log('\n')
     console.log('\x1b[32m%s\x1b[0m%s', 'success', ' Project setup complete!')
     console.log('      - Next steps:')
-    console.log(`      - cd ${projectName || DEFAULT_PROJECT}`)
-    console.log(`      - ${isYarnAvailable() ? 'yarn server' : 'npm run server'}`)
+    console.log(`      - cd ${projectName || DEFAULT_PROJECT}/wp-content/themes/framesync`)
+    console.log(`      - ${isYarnAvailable() ? 'yarn watch' : 'npm run watch'}`)
   } catch (err) {
     console.error('Error:', err.message)
     process.exit(1)
