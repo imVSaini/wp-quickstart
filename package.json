@@ -1,7 +1,7 @@
 {
   "name": "create-wp-quickstart",
   "version": "1.0.0",
-  "description": "Create a production-ready WordPress site with the Framesync theme in one command. Optimized for speed, SEO, and modern development, it features a lightweight design, modular structure, and efficient asset handling. 🚀",
+  "description": "Create WP Quickstart is a boilerplate to quickly set up a WordPress theme development environment with the `framesync` theme",
   "bin": "bin/cli.js",
   "main": "index.js",
   "type": "module",
