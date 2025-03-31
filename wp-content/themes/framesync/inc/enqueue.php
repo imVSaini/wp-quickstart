@@ -46,7 +46,7 @@ if (!function_exists('theme_scripts')) {
         wp_enqueue_script('wp-theme', get_template_directory_uri() . $theme_scripts, array('jquery'), $theme_version, true);
         wp_script_add_data( 'wp-theme', 'defer', true );
         wp_localize_script('wp-theme', 'themes', [
-            'rootURI' => get_template_directory_uri(),
+            'ROOT_URI' => get_template_directory_uri(),
         ]);
     }
 } // End of if function_exists( 'theme_scripts' ).
