@@ -47,6 +47,23 @@ bower_components
 node_modules
 /vendor/
 
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# Database volume
+data
+
+# Certs
+certs/
+
+# Logs
+logs/
+
+# Custom
+.DS_Store
+
 # Other UnderStrap specific files and directories
 phpcs.xml
 phpcs.xml.dist
