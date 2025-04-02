@@ -130,6 +130,8 @@ async function setupProject() {
     console.log('\n')
     console.log('\x1b[32m%s\x1b[0m%s', 'success', ' Project setup complete!')
     console.log('      - Next steps:')
+    console.log(`      - cd ${projectName || DEFAULT_PROJECT}`)
+    console.log('      - docker compose up -d --build')
     console.log(`      - cd ${projectName || DEFAULT_PROJECT}/wp-content/themes/framesync`)
     console.log(`      - ${isYarnAvailable() ? 'yarn watch' : 'npm run watch'}`)
   } catch (err) {
