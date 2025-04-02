@@ -2,10 +2,11 @@
 
 [![npm version](https://badge.fury.io/js/create-wp-quickstart.svg)](https://badge.fury.io/js/create-wp-quickstart)
 
-WP Quickstart is a boilerplate to quickly set up a WordPress theme development environment with the `framesync` theme.
+WP Quickstart is a boilerplate to quickly set up a WordPress development environment.
 
 ## Features
 
+- **Docker Support** – Seamless containerized WordPress development.
 - **Tailwind CSS Integration** – Fully integrated with Tailwind for rapid styling.
 - **Laravel Mix for Asset Bundling** – Uses Webpack via Laravel Mix to compile assets efficiently.
 - **Live Reload with BrowserSync** – Automatically refreshes your browser on code changes.
@@ -28,6 +29,75 @@ npx create-wp-quickstart
 3. Cleans up unnecessary files and resets Git history
 4. Installs dependencies inside `wp-content/themes/framesync`
 5. Provides next steps for development
+
+### Create SSL Certificate
+
+To work with HTTPS using a custom domain, ensure you have **mkcert** installed. Then, follow these steps:
+
+1. Open your terminal and navigate to the CLI directory:
+   ```sh
+   cd cli
+   ```
+2. Run the certificate creation script:
+   ```sh
+   ./create-cert.sh
+   ```
+
+### Using HTTPS with a Custom Domain
+
+After generating the SSL certificate, update your system’s hosts file to point your custom domain (e.g., `myapp.local`) to your local environment.
+
+#### For macOS
+Open the hosts file with:
+```sh
+sudo nano /etc/hosts
+```
+Then add the following lines:
+```
+::1 myapp.local #Local Site
+127.0.0.1 myapp.local #Local Site
+::1 www.myapp.local #Local Site
+127.0.0.1 www.myapp.local #Local Site
+```
+
+#### For Windows (Using PowerShell as Administrator)
+1. Open PowerShell in Administrator mode.
+2. Run the following command to open the hosts file in Notepad:
+   ```powershell
+   Start-Process notepad.exe -ArgumentList "C:\Windows\System32\drivers\etc\hosts" -Verb RunAs
+   ```
+3. Add the following lines to the hosts file:
+   ```
+   ::1 myapp.local #Local Site
+   127.0.0.1 myapp.local #Local Site
+   ::1 www.myapp.local #Local Site
+   127.0.0.1 www.myapp.local #Local Site
+   ```
+
+### Docker Commands
+
+To manage the development environment using Docker, use the following commands:
+
+- **Build and start the containers:**
+  ```sh
+  docker compose up --build
+  ```
+- **Start Docker containers in detached mode:**
+  ```sh
+  docker compose up -d
+  ```
+- **Stop and remove containers:**
+  ```sh
+  docker compose down
+  ```
+- **Restart all running containers:**
+  ```sh
+  docker compose restart
+  ```
+- **View real-time logs from containers:**
+  ```sh
+  docker compose logs -f
+  ```
 
 ## Next Steps
 
@@ -54,16 +124,16 @@ This project uses Laravel Mix and Tailwind CSS for theme development. The theme 
 Before running BrowserSync, make sure to update the `proxy` value in your `webpack.mix.js` file to match your local development URL:
 
 ```js
-proxy: "example.local",
+proxy: "myapp.local",
 ```
 
-Replace `example.local` with your actual local development domain.
+Replace `myapp.local` with your actual local development domain.
 
 ### Available Commands
 
 - **Start Development:**
   ```sh
-  npx mix watch
+  npm start
   ```
 - **Lint JavaScript:**
   ```sh
@@ -75,7 +145,7 @@ Replace `example.local` with your actual local development domain.
   ```
 - **Build for Production:**
   ```sh
-  npx mix --production
+  npm run build
   ```
 
 ## License
