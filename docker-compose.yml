@@ -7,6 +7,7 @@ services:
     volumes:
       - "./nginx/:/etc/nginx/templates/"
       - wordpress_data:/var/www/html
+      - ./wp-content:/var/www/html/wp-content:rw
       - ./certs:/etc/certs
     environment:
       - "NGINX_ENVSUBST_TEMPLATE_SUFFIX=.conf"
