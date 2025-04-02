@@ -119,6 +119,14 @@ async function setupProject() {
       }
     }
 
+    // Copy .env.example to .env if it exists.
+    const envExamplePath = path.join(projectPath, '.env.example')
+    const envPath = path.join(projectPath, '.env')
+    if (fs.existsSync(envExamplePath)) {
+      fs.copyFileSync(envExamplePath, envPath)
+      fs.rmSync(envExamplePath, { recursive: true, force: true })
+    }
+
     console.log('\n')
     console.log('\x1b[32m%s\x1b[0m%s', 'success', ' Project setup complete!')
     console.log('      - Next steps:')
