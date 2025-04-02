@@ -2,18 +2,18 @@ version: '3.8'
 
 services:
   nginx:
-    image: nginx:alpine
+    image: nginx:latest
     container_name: ${APP_NAME}-nginx
-    ports:
-      - '80:80'
-      - '443:443'
     volumes:
       - "./nginx/:/etc/nginx/templates/"
-      - wordpress:/var/www/html
+      - wordpress_data:/var/www/html
       - ./certs:/etc/certs
     environment:
       - "NGINX_ENVSUBST_TEMPLATE_SUFFIX=.conf"
       - "DOMAIN=${DOMAIN}"
+    ports:
+      - '80:80'
+      - '443:443'
     depends_on:
       - wordpress
     networks:
@@ -21,16 +21,16 @@ services:
     restart: always
 
   mysql:
-    image: mysql:latest
+    image: mysql:8.0
     container_name: ${APP_NAME}-mysql
+    volumes:
+      - mysql_data:/var/lib/mysql
     environment:
       # MYSQL_ROOT_PASSWORD: rootpassword
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
       MYSQL_DATABASE: ${DB_NAME:-myapp}
     ports:
       - '3306:3306'
-    volumes:
-      - dbdata:/var/lib/mysql
     networks:
       - wp-network
     restart: always
@@ -42,9 +42,9 @@ services:
 
   wordpress:
     image: wordpress:fpm-alpine
-    container_name: ${APP_NAME}
+    container_name: ${APP_NAME}-wordpress
     volumes:
-    - wordpress:/var/www/html
+    - wordpress_data:/var/www/html
     - ./wp-content:/var/www/html/wp-content:rw
     - ./config/php.ini:/usr/local/etc/php/conf.d/php.ini
     environment:
@@ -66,17 +66,17 @@ services:
     container_name: ${APP_NAME}-phpmyadmin
     volumes:
       - ./config/phpmyadmin.ini:/usr/local/etc/php/conf.d/phpmyadmin.ini
-    ports:
-      - '8080:80'
     environment:
       PMA_HOST: mysql
+    ports:
+      - '8080:80'
     networks:
       - wp-network
     restart: always
 
 volumes:
-  dbdata:
-  wordpress:
+  mysql_data:
+  wordpress_data:
 
 networks:
   wp-network:
