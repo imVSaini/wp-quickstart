@@ -54,7 +54,7 @@ if (!isProduction) {
   mix.browserSync({
     ui: false,
     notify: false,
-    proxy: "myapp.local",
+    proxy: "https://myapp.local/",
     files: [
       "dist/**/*",
       "inc/**/*.php",
