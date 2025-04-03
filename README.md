@@ -1,6 +1,6 @@
 # WP Quickstart
 
-[![npm version](https://badge.fury.io/js/create-wp-quickstart.svg)](https://badge.fury.io/js/create-wp-quickstart)
+[![npm version](https://badge.fury.io/js/create-wp-quickstart.svg)](https://badge.fury.io/js/create-wp-quickstart) [![CI](https://github.com/imVSaini/wp-quickstart/actions/workflows/ci.yml/badge.svg)](https://github.com/imVSaini/wp-quickstart/actions/workflows/ci.yml)
 
 WP Quickstart is a boilerplate to quickly set up a WordPress development environment.
 
@@ -124,7 +124,7 @@ This project uses Laravel Mix and Tailwind CSS for theme development. The theme 
 Before running BrowserSync, make sure to update the `proxy` value in your `webpack.mix.js` file to match your local development URL:
 
 ```js
-proxy: "myapp.local",
+proxy: "https://myapp.local/",
 ```
 
 Replace `myapp.local` with your actual local development domain.
