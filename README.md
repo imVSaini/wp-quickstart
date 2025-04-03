@@ -106,7 +106,7 @@ If you want to access phpMyAdmin, use the following credentials:
 1. Username: `root`
 2. Password: `(leave blank)`
 
-After starting your Docker containers, you can access phpMyAdmin by navigating to the appropriate URL [`http://localhost:8080/`](http://localhost:8080/).
+After starting your Docker containers, you can access phpMyAdmin by navigating to the appropriate URL: [`http://localhost:8080/`](http://localhost:8080/)
 
 ## Next Steps
 
