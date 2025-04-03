@@ -2,8 +2,8 @@
 /*
  * Plugin Name: Projects
  * Description: Effortlessly display your projects! Utilize Vaeris Fields plugin to showcase projects with custom fields on your WordPress site.
- * Author: Vaibhav Kumar Saini
- * Author URI: https://vaibhavsaini.in/
+ * Author: Vaibhav Saini
+ * Author URI: https://www.linkedin.com/in/vaibhavsaini07/
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Version: 1.0.0

@@ -2,8 +2,8 @@
 /*
  * Plugin Name: Teams
  * Description: Boost team visibility! Showcase your team members elegantly on your WordPress site with our easy-to-use team plugin.
- * Author: Vaibhav Kumar Saini
- * Author URI: https://vaibhavsaini.in/
+ * Author: Vaibhav Saini
+ * Author URI: https://www.linkedin.com/in/vaibhavsaini07/
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Version: 1.0.0

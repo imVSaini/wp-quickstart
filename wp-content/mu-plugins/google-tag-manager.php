@@ -2,8 +2,8 @@
 /*
  * Plugin Name: Google Tag Integration
  * Description: A simple plugin to integrate Google Tag (gtag.js) with configurable tracking IDs for Google Analytics (GA4) and Google Ads.
- * Author: Vaibhav Kumar Saini
- * Author URI: https://vaibhavsaini.in/
+ * Author: Vaibhav Saini
+ * Author URI: https://www.linkedin.com/in/vaibhavsaini07/
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Version: 1.1.0
