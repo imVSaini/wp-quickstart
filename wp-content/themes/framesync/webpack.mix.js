@@ -1,36 +1,37 @@
-const mix = require("laravel-mix");
-const tailwindcss = require("tailwindcss");
-const fs = require("fs-extra");
+/* eslint-disable */
+const mix = require('laravel-mix');
+const tailwindcss = require('tailwindcss');
+const fs = require('fs-extra');
 
 const isProduction = mix.inProduction();
-const filenameSuffix = isProduction ? ".min" : "";
+const filenameSuffix = isProduction ? '.min' : '';
 const filename = `theme.bundle${filenameSuffix}`;
-const distDir = "dist";
+const distDir = 'dist';
 
 // Clean the 'dist' directory before building
 fs.emptyDirSync(distDir);
 
 // JS and SCSS configurations
 const jsConfig = {
-  from: "js/index.js",
+  from: 'js/index.js',
   to: `js/${filename}.js`,
 };
 
 const sassConfig = {
-  from: "sass/main.scss",
+  from: 'sass/main.scss',
   to: `css/${filename}.css`,
 };
 
 // Common configurations
 const commonConfigs = {
   processCssUrls: false,
-  postCss: [tailwindcss("tailwind.config.js")],
+  postCss: [tailwindcss('tailwind.config.js')],
 };
 
 // Babel configuration
 const babelConfigs = {
-  presets: ["@babel/preset-env"],
-  plugins: ["@babel/plugin-transform-runtime"],
+  presets: ['@babel/preset-env'],
+  plugins: ['@babel/plugin-transform-runtime'],
 };
 
 // Mix configurations
@@ -54,15 +55,15 @@ if (!isProduction) {
   mix.browserSync({
     ui: false,
     notify: false,
-    proxy: "https://myapp.local/",
+    proxy: 'https://myapp.local/',
     files: [
-      "dist/**/*",
-      "inc/**/*.php",
-      "templates/**/*.php",
-      "functions.php",
-      "header.php",
-      "footer.php",
-      "404.php",
+      'dist/**/*',
+      'inc/**/*.php',
+      'templates/**/*.php',
+      'functions.php',
+      'header.php',
+      'footer.php',
+      '404.php',
     ],
   });
 }
