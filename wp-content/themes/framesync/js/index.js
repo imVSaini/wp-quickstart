@@ -1,1 +1,1 @@
-import "./modules/feature";
+import './modules/feature';
