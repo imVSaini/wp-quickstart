@@ -124,7 +124,7 @@ async function setupProject() {
     const envPath = path.join(projectPath, '.env')
     if (fs.existsSync(envExamplePath)) {
       fs.copyFileSync(envExamplePath, envPath)
-      fs.rmSync(envExamplePath, { recursive: true, force: true })
+      fs.unlinkSync(envExamplePath)
     }
 
     console.log('\n')
