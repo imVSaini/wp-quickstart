@@ -42,6 +42,7 @@ To work with HTTPS using a custom domain, ensure you have **mkcert** installed. 
    ```sh
    ./create-cert.sh
    ```
+   **(Windows Users)** Recommended to use **Git Bash**.
 
 ### Using HTTPS with a Custom Domain
 
