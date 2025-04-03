@@ -99,6 +99,15 @@ To manage the development environment using Docker, use the following commands:
   docker compose logs -f
   ```
 
+### phpMyAdmin Login
+
+If you want to access phpMyAdmin, use the following credentials:
+
+1. Username: `root`
+2. Password: `(leave blank)`
+
+After starting your Docker containers, you can access phpMyAdmin by navigating to the appropriate URL (e.g., `http://localhost:8080` or the port configured in your Docker setup).
+
 ## Next Steps
 
 Once setup is complete, navigate to your theme directory and start development:
