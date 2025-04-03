@@ -1,12 +1,12 @@
 {
   "name": "create-wp-quickstart",
   "version": "1.0.0",
-  "description": "Create WP Quickstart is a boilerplate to quickly set up a WordPress theme development environment with the `framesync` theme",
+  "description": "Create WP Quickstart is a boilerplate to quickly set up a WordPress development environment with Docker.",
   "bin": "bin/cli.js",
   "main": "index.js",
   "type": "module",
   "repository": "https://github.com/imVSaini/wp-quickstart.git",
-  "keywords": ["wordpress", "theme", "webpack", "tailwind", "laravel-mix"],
+  "keywords": ["wordpress", "theme", "webpack", "tailwind", "docker", "phpmyadmin", "browsersync", "eslint", "prettier", "scss", "live-reload", "ssl", "development", "automation"],
   "author": "Vaibhav Saini",
   "license": "MIT"
 }
