@@ -16,7 +16,7 @@ WP Quickstart is a boilerplate to quickly set up a WordPress development environ
 
 ## Installation
 
-Ensure you have Node.js installed:
+Ensure you have [Node.js](https://nodejs.org/) installed:
 
 ### Using npx
 ```sh
@@ -32,7 +32,21 @@ npx create-wp-quickstart
 
 ### Create SSL Certificate
 
-To work with HTTPS using a custom domain, ensure you have **mkcert** installed. Then, follow these steps:
+To work with HTTPS using a custom domain, ensure you have **mkcert** installed. If **mkcert** is not already installed. Then, follow these steps:
+
+#### For macOS
+```sh
+brew install mkcert
+```
+
+#### For Windows (Using PowerShell as Administrator)
+1. Open PowerShell in Administrator mode.
+2. Run the following command to download and install **mkcert**:
+   ```powershell
+   Invoke-WebRequest -Uri https://github.com/FiloSottile/mkcert/releases/download/v1.4.3/mkcert-v1.4.3-windows-amd64.exe -OutFile mkcert.exe
+   ```
+
+After installing **mkcert**, proceed with the following steps:
 
 1. Open your terminal and navigate to the CLI directory:
    ```sh
@@ -42,7 +56,7 @@ To work with HTTPS using a custom domain, ensure you have **mkcert** installed. 
    ```sh
    ./create-cert.sh
    ```
-   **(Windows Users)** Recommended to use **Git Bash**.
+   **Note:** It is recommended to use **Git Bash** to run the script.
 
 ### Using HTTPS with a Custom Domain
 
