@@ -25,6 +25,7 @@
 !.gitattributes
 !.github
 !.gitignore
+!.dockerignore
 !.jscsrc
 !.jshintignore
 !.travis.yml
