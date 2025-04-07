@@ -1,6 +1,6 @@
 {
   "name": "create-wp-quickstart",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Create WP Quickstart is a boilerplate to quickly set up a WordPress development environment with Docker.",
   "bin": "bin/cli.js",
   "main": "index.js",
