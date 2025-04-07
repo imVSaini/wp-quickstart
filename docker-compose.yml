@@ -29,7 +29,7 @@ services:
     environment:
       # MYSQL_ROOT_PASSWORD: rootpassword
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
-      MYSQL_DATABASE: ${DB_NAME:-myapp}
+      MYSQL_DATABASE: ${DB_NAME}
     ports:
       - '3306:3306'
     networks:
@@ -49,7 +49,7 @@ services:
     - ./wp-content:/var/www/html/wp-content:rw
     - ./config/php.ini:/usr/local/etc/php/conf.d/php.ini
     environment:
-      - WORDPRESS_DB_NAME=${DB_NAME:-myapp}
+      - WORDPRESS_DB_NAME=${DB_NAME}
       - WORDPRESS_DB_HOST=${DB_HOST:-mysql}
       - WORDPRESS_DB_PORT=${DB_PORT:-3306}
       - WORDPRESS_DB_USER=${DB_USER:-root}
