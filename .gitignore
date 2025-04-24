@@ -22,6 +22,9 @@
 # but track
 !.browserslist
 !.editorconfig
+!.stylelintrc
+!.prettierrc
+!.prettierignore
 !.gitattributes
 !.github
 !.gitignore
