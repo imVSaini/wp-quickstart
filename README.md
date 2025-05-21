@@ -23,19 +23,6 @@ WP Quickstart is a boilerplate to quickly set up a WordPress development environ
 -   `nginx/`: Nginx configuration files used for serving the WordPress site within the Docker environment.
 -   `config/`: PHP and phpMyAdmin configuration files, allowing customization of their respective settings.
 
-## Custom Plugins
-
-This project includes several custom Must-Use (MU) plugins located in the `wp-content/mu-plugins/` directory. These plugins provide essential functionalities and are automatically activated:
-
--   **`career.php`**: Manages job listings (Careers custom post type) with taxonomies for tags, categories (Job Types), and locations. Includes functionality to duplicate job postings and filter them in the admin area.
--   **`clientele.php`**: Manages client logos (Clientele custom post type).
--   **`google-tag-manager.php`**: Integrates Google Tag Manager (gtag.js) with configurable tracking IDs for Google Analytics (GA4) and Google Ads. Adds a settings page in the admin panel.
--   **`meta-pixel-manager.php`**: Integrates Meta Pixel (Facebook Pixel) tracking code. Adds a settings page in the admin panel for the Pixel ID.
--   **`project.php`**: Manages project showcases (Project custom post type) with taxonomies for tags, categories, and locations. Includes functionality to duplicate projects and filter them in the admin area.
--   **`social.php`**: Adds a settings page in the admin panel to manage links to various social media profiles (Facebook, Instagram, Threads, Twitter, LinkedIn, YouTube).
--   **`team.php`**: Manages team member profiles (Team custom post type) with taxonomies for tags, categories, and locations. Includes functionality to duplicate team member entries and filter them in the admin area.
--   **`testimonial.php`**: Manages testimonials (Testimonial custom post type) with taxonomies for tags, categories, and locations. Includes functionality to duplicate testimonials and filter them in the admin area.
-
 ## Installation
 
 Ensure you have [Node.js](https://nodejs.org/) (LTS version recommended) installed on your system.
