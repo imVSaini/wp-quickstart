@@ -7,7 +7,6 @@
     "start": "mix watch",
     "lint": "eslint \"js/**/*.js\"",
     "lint:fix": "eslint \"js/**/*.js\" --fix",
-    "lint:styles": "stylelint \"sass/**/*.scss\"",
     "watch": "mix watch",
     "build": "mix --production"
   },
@@ -24,8 +23,6 @@
     "eslint-plugin-prettier": "^5.2.3",
     "globals": "^16.0.0",
     "laravel-mix": "^6.0.49",
-    "prettier": "^3.5.2",
-    "stylelint": "^16.19.0",
-    "stylelint-config-standard-scss": "^14.0.0"
+    "prettier": "^3.5.2"
   }
 }
