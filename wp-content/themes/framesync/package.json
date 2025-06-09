@@ -1,6 +1,6 @@
 {
   "name": "framestrap",
-  "version": "1.0.0",
+  "version": "1.3.0",
   "description": "Framesync\" is a modern WordPress theme with Webpack and Tailwind, featuring auto-reload for instant browser refresh on code changes",
   "main": "webpack.mix.js",
   "scripts": {
